@@ -1,4 +1,6 @@
 // TODO: Include packages needed for this application
+// did it by wrting "npm init" in the terminal
+// then "npm i inquirer" in the terminal
 
 // TODO: Create an array of questions for user input
 const questions = [];
