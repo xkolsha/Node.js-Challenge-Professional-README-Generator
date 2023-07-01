@@ -2,9 +2,9 @@
 // did it by wrting "npm init" in the terminal
 // then "npm i inquirer" in the terminal
 
-const inquirer = require("inquirer");
-const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
+import inquirer from "inquirer";
+import { writeFile } from "fs";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 const questions = [];
