@@ -72,7 +72,11 @@ async function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+  const answers = await inquirer.prompt(questions);
+  const markdown = generateMarkdown(answers);
+  await writeToFile("README.md", markdown);
+}
 
 // Function call to initialize app
 init();
