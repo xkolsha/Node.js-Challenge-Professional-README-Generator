@@ -20,8 +20,44 @@ const questions = [
   },
   {
     type: "input",
-    name: "How to Complete the Challenge",
+    name: "howToComplete",
     message: "Please provide How to Complete the Challenge/Project.",
+  },
+  {
+    type: "input",
+    name: "userStory",
+    message: "Please provide a User Story.",
+  },
+  {
+    type: "input",
+    name: "acceptanceCriteria",
+    message: "What are the acceptance criteria for your project?",
+  },
+  {
+    type: "input",
+    name: "mockUp",
+    message: "Provide a description for your project's mock up.",
+  },
+  {
+    type: "input",
+    name: "githubRepo",
+    message: "What is the GitHub repository URL for your project?",
+  },
+  {
+    type: "input",
+    name: "deployedApplication",
+    message: "What is the URL for your deployed application?",
+  },
+  {
+    type: "input",
+    name: "credits",
+    message: "Who are the contributors for this project?",
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "Please choose the license for your project.",
+    choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "None"],
   },
 ];
 
