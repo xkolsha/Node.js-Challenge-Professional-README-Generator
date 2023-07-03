@@ -7,7 +7,23 @@ import { writeFile } from "fs";
 import generateMarkdown from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Please provide a description of your project.",
+  },
+  {
+    type: "input",
+    name: "How to Complete the Challenge",
+    message: "Please provide How to Complete the Challenge/Project.",
+  },
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
