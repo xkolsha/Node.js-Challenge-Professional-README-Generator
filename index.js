@@ -4,7 +4,7 @@
 
 import inquirer from "inquirer";
 import { writeFile } from "fs";
-import generateMarkdown from "./utils/generateMarkdown.js";
+import { generateMarkdown } from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 const questions = [

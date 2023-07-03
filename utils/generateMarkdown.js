@@ -36,6 +36,48 @@ function generateMarkdown(data) {
     default:
       licenseBadge = "";
   }
+
+  return `# ${data.title}
+
+  ## Description
+  ${data.description}
+
+  ## Table of Contents
+  - [User Story](#user-story)
+  - [How to Complete the Challenge](#how-to-complete-the-challenge)
+  - [Acceptance Criteria](#acceptance-criteria)
+  - [Mock Up](#mock-up)
+  - [GitHub Repository](#github-repository)
+  - [Deployed Application](#deployed-application)
+  - [Credits](#credits)
+  - [License](#license)
+
+  ## User Story
+  ${data.userStory}
+
+  ## How to Complete the Challenge
+  ${data.howToComplete}
+
+  ## Acceptance Criteria
+  ${data.acceptanceCriteria}
+
+  ## Mock Up
+  ${data.mockUp}
+
+  ## GitHub Repository
+  [Repository Link](${data.githubRepo})
+
+  ## Deployed Application
+  [Application Link](${data.deployedApplication})
+
+  ## Credits
+  ${data.credits}
+
+  ## License
+  This project is licensed under the ${data.license} license.
+
+  ${licenseBadge}
+  `;
 }
 
 export { generateMarkdown };
