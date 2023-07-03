@@ -1,14 +1,10 @@
-// TODO: Include packages needed for this application
-// did it by wrting "npm init" in the terminal
-// then "npm i inquirer" in the terminal
-
+// Import necessary packages
 import inquirer from "inquirer";
-import { writeFile } from "fs";
-import { generateMarkdown } from "./utils/generateMarkdown.js";
 import fs from "fs";
 import util from "util";
+import { generateMarkdown } from "./utils/generateMarkdown.js";
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
   {
     type: "input",
@@ -69,8 +65,7 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
-// TODO: Create a function to initialize app
+// Function to write README file + initialize app
 
 async function init() {
   try {
