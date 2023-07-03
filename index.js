@@ -5,6 +5,8 @@
 import inquirer from "inquirer";
 import { writeFile } from "fs";
 import { generateMarkdown } from "./utils/generateMarkdown.js";
+import fs from "fs";
+import util from "util";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -36,7 +38,7 @@ const questions = [
   {
     type: "input",
     name: "mockUp",
-    message: "Provide a description for your project's mock up.",
+    message: "Add a link/photo to your project's mock up.",
   },
   {
     type: "input",
@@ -74,12 +76,12 @@ async function init() {
   try {
     const answers = await inquirer.prompt(questions);
     const markdown = generateMarkdown(answers);
-    await writeFile("README.md", markdown);
+    const writeFileAsync = util.promisify(fs.writeFile);
+    await writeFileAsync("README.md", markdown);
     console.log("Successfully wrote to README.md");
   } catch (error) {
     console.error(error);
   }
 }
-
 // Function call to initialize app
 init();
