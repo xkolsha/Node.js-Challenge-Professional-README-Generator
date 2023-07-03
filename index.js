@@ -57,25 +57,28 @@ const questions = [
     type: "list",
     name: "license",
     message: "Please choose the license for your project.",
-    choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "None"],
+    choices: [
+      "MIT",
+      "Mozilla Public License 2.0",
+      "Unlicense",
+      "BSD-3-Clause",
+      "None",
+    ],
   },
 ];
 
 // TODO: Create a function to write README file
-async function writeToFile(fileName, data) {
-  try {
-    await fs.writeFile(fileName, data);
-    console.log("Success!");
-  } catch (err) {
-    console.error(err);
-  }
-}
-
 // TODO: Create a function to initialize app
+
 async function init() {
-  const answers = await inquirer.prompt(questions);
-  const markdown = generateMarkdown(answers);
-  await writeToFile("README.md", markdown);
+  try {
+    const answers = await inquirer.prompt(questions);
+    const markdown = generateMarkdown(answers);
+    await writeFile("README.md", markdown);
+    console.log("Successfully wrote to README.md");
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 // Function call to initialize app
