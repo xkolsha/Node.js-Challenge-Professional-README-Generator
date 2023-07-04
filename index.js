@@ -49,7 +49,7 @@ const questions = [
   {
     type: "input",
     name: "credits",
-    message: "Who are the contributors for this project?",
+    message: "Who are the contributors/resources for this project?",
   },
   {
     type: "list",
